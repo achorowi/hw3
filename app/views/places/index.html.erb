@@ -3,8 +3,9 @@
 <ul>
   <% for place in @places %>
   <li>
-    <a href="/places/<%=place["name"] %>" </a>
+    <a href="/places/ <%= place["name"] %>" </a>
   </li>
+  <%end%>
 </ul>
 
 <p> <a href = "/places/new">Create a new place</a></p>
