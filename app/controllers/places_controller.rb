@@ -32,7 +32,7 @@ class PlacesController < ApplicationController
   end
 
   def destroy
-    @place = Place.find_by({"name" => params["name"]})
+    @place = Place.find_by({"id" => params["id"]})
     @place.destroy
     redirect_to "/places"
   end
