@@ -5,8 +5,8 @@ class PlacesController < ApplicationController
   end
 
   def show
-    @place = Place.find_by({"name" => params["name"]})
-    @posts = Post.where({"place_id" => @place["name"]})
+    @place = Place.find_by({"id" => params["id"]})
+    @posts = Post.where({"place_id" => @place["id"]})
   end
 
   def new
@@ -36,5 +36,5 @@ class PlacesController < ApplicationController
     @place.destroy
     redirect_to "/places"
   end
-  
+
 end
